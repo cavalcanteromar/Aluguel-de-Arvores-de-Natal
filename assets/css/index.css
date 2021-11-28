@@ -1,0 +1,465 @@
+@font-face {
+  font-family: Poppins-Light;
+  src: url(/assets/fonts/Poppins-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Poppins-Light;
+}
+
+body {
+  background-color: #2B1131;
+}
+
+main {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  background-color: aliceblue;
+}
+
+main header {
+  padding: 1%;
+  background-color: rgba(177, 4, 39, 0.911);
+  position: relative;
+}
+
+main header .selector {
+  padding: 2%;
+}
+
+main header .selector .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-size: clamp(1px, 3vw, 17px);
+  text-shadow: 1px 1px 1px black;
+}
+
+main header .selector .choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2%;
+  gap: 3%;
+  font-size: clamp(1px, 3vw, 17px);
+  color: white;
+}
+
+main header .selector .choice div:first-child {
+  height: 100%;
+}
+
+main header .selector .choice div:nth-child(2) {
+  height: 0px;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main header .selector .choice div:nth-child(2) .seleciona {
+  position: absolute;
+  left: -9999px;
+}
+
+main header .selector .choice div:nth-child(2) .seleciona_btn {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+}
+
+main header .selector .choice div:nth-child(2) .seleciona_btn::before,
+main header .selector .choice div:nth-child(2) .seleciona_btn::after {
+  content: "";
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main header .selector .choice div:nth-child(2) .seleciona_btn::before {
+  display: inline-block;
+  width: 4.8rem;
+  height: 1.8rem;
+  background-color: rgba(212, 208, 208, 0.37);
+  border-radius: 1rem;
+  -webkit-box-shadow: .1px .5px 2px black;
+          box-shadow: .1px .5px 2px black;
+}
+
+main header .selector .choice div:nth-child(2) .seleciona_btn::after {
+  position: absolute;
+  top: 0.16rem;
+  left: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 1px black;
+          box-shadow: 1px 1px 1px black;
+}
+
+main header .selector .choice div:nth-child(2) .seleciona:checked + .seleciona_btn::before {
+  background-color: rgba(177, 20, 20, 0.37);
+}
+
+main header .selector .choice div:nth-child(2) .seleciona:checked + .seleciona_btn::after {
+  left: 3rem;
+}
+
+main header .selector .time {
+  gap: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main header .selector .time #label-number {
+  font-size: clamp(1px, 3vw, 17px);
+  color: white;
+}
+
+main header .selector .time #number {
+  border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: 1px 1px 2px grey;
+          box-shadow: 1px 1px 2px grey;
+  width: 500px;
+  height: 30px;
+  padding: 0 4%;
+}
+
+main header .selector .time #number[type=number] {
+  width: 10%;
+}
+
+main header .plan {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main header .plan a {
+  margin: 1%;
+  display: -ms-grid;
+  display: grid;
+  width: clamp(0px, 100vw, 500px);
+  height: clamp(0px, 100vw, 230px);
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 1px 1px lightgrey;
+          box-shadow: 2px 2px 1px 1px lightgrey;
+  text-decoration: none;
+}
+
+main header .plan a .card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.2fr 1fr;
+      grid-template-columns: 1.2fr 1fr;
+  background-color: #E5DED6;
+}
+
+main header .plan a .card div:first-child {
+  width: 100%;
+  height: 100%;
+}
+
+main header .plan a .card div:first-child img {
+  width: 100%;
+  height: 100%;
+}
+
+main header .plan a .card div:last-child {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  background-color: #E5DED6;
+  text-shadow: 0.1px 1px 0.1px #4e4e4e;
+}
+
+main header .plan a .card div:last-child p {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main header .plan a .card div:last-child h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main header .plan a .card div:last-child h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main header .plan a .card div:last-child #type-plano {
+  padding-top: 2%;
+  font-size: 18px;
+  color: brown;
+  font-weight: bold;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main header .plan .card:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+main .total_da_compra {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.575);
+}
+
+main .total_da_compra table {
+  width: clamp(350px, 35vw, 600px);
+  border-radius: 10px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+main .total_da_compra table tr th {
+  font-size: 1.4rem;
+  padding: 4% 0;
+}
+
+main .total_da_compra table tr td {
+  width: 0%;
+  padding: 0px;
+  font-size: 1.2rem;
+}
+
+main .total_da_compra table tr td #cancelar {
+  width: 95%;
+  padding: 2%;
+  margin-left: 3%;
+}
+
+main .total_da_compra table tr td #confirmar {
+  width: 95%;
+  padding: 2%;
+  margin-left: 2%;
+}
+
+main .total_da_compra table tr .textleft {
+  padding-left: 10%;
+}
+
+main .total_da_compra table tr .textright {
+  padding-left: 30%;
+}
+
+main .total_da_compra table tr #total {
+  text-align: center;
+  padding: 2% 0;
+}
+
+main .total_da_compra table tr #total_valor {
+  text-align: center;
+}
+
+main .total_da_compra table tr .buttons {
+  padding: 5% 0;
+}
+
+main .telacheia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.575);
+}
+
+main .telacheia .time {
+  width: clamp(350px, 35vw, 600px);
+  height: clamp(250px, 25vw, 400px);
+  background-color: white;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+  position: relative;
+}
+
+main .telacheia .time #label-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .telacheia .time #number {
+  padding: 5% 0;
+  width: 30%;
+  text-align: center;
+  border: none;
+}
+
+main .telacheia .time button {
+  width: 50%;
+  padding: 1%;
+  font-size: 18px;
+}
+
+main .telacheia .time a {
+  width: 15px;
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+main .telacheia .time a img {
+  width: 100%;
+}
+
+main .agradecemos {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.575);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .agradecemos .ok {
+  width: clamp(350px, 35vw, 600px);
+  height: clamp(250px, 25vw, 400px);
+  background-color: white;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .agradecemos button {
+  margin-left: 5%;
+  padding: 1%;
+  border-radius: 1%;
+}
+
+main .hide {
+  display: none;
+}
+
+main .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=index.css.map */

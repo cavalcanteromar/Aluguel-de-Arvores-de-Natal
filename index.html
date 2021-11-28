@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Tree</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <main>
+        <header>            
+            <div class="selector">
+                <div class="title">
+                    <h1>Aluguel de Árvores de Natal</h1>
+                </div>
+
+                <!-- ///////////// -->
+
+
+
+                
+                <div class="choice">
+                    <div><h3 id="forweek">por semana</h3></div>
+                    <div>
+                        <input type="checkbox" class="seleciona" id="seleciona">
+                        <label for="seleciona" class="seleciona_btn"></label>
+                    </div>
+                    <div><h3 id="forMonth">por mês</h3></div>
+                </div>
+
+
+
+
+
+                <!-- //////////// -->
+                
+            </div>
+            <div class="plan" id="plan">                               
+            </div>
+        </header>
+        <section id="total_da_compra" class="total_da_compra">
+            <table>
+                <tr>
+                    <th colspan="3">
+                        Finalizar Compra
+                    </th>
+                </tr>
+                <tr>
+                    <td id="plano" class="textleft">Plano</td>
+                    <td id="plano_x" class="textright">xxx</td>
+                </tr>
+                <tr>
+                    <td id="valor" class="textleft">valor</td>
+                    <td id="valor_x" class="textright">xxx</td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="total">Total</td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="total_valor">xxx</td>
+                </tr>
+                <tr>
+                    <td class="buttons">
+                        <button id="cancelar">Cancelar</button>
+                    </td>
+                    <td class="buttons">
+                        <button id="confirmar">Confirmar</button>
+                    </td>
+                </tr>
+            </table>
+            
+        </section>
+
+        <div class="telacheia hide" id="telacheia">
+            <div class="time">
+                <label for="number" id="label-number">Por quantas semanas</label>
+                <input class="number" type="number" id="number" value="10">
+                <button id="btn_confirma_semanas">ok</button>
+                <a id="close_qtd"><img src="/assets/img/arvores/close.png" alt=""> </a>
+            </div>
+        </div>
+
+        <div class="agradecemos" id="agradecemos">
+            <div class="ok" id="ok">
+                Agradecemos a preferência!
+                <button id="fechar">fechar</button>
+            </div>
+        </div>
+
+    </main>
+</body>
+<script src="assets/js/index.js"></script>
+</html>
